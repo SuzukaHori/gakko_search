@@ -1,8 +1,18 @@
 {
+  "name": "gakkou-search",
+  "version": "1.0.2",
   "scripts": {
     "fix": "prettier --write . && eslint --fix .",
     "lint": "prettier --check . && eslint ."
   },
+  "bin": {
+    "gakkou-search": "./main.js"
+  },
+  "keywords": [
+    "学校",
+    "school"
+  ],
+  "license": "MIT",
   "devDependencies": {
     "eslint": "^8.43.0",
     "eslint-config-prettier": "^8.8.0",
@@ -10,7 +20,10 @@
   },
   "type": "module",
   "dependencies": {
-    "sqlite3": "^5.1.6",
-    "ttvc": "^1.0.3"
+    "axios": "^1.6.2",
+    "child_process": "^1.0.2",
+    "enquire": "^0.0.2",
+    "enquirer": "^2.4.1",
+    "url-join": "^5.0.0"
   }
 }
