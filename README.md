@@ -21,4 +21,4 @@ npm install -g gakko-search
 export API_TOKEN='xxxxxxxxxxxxxxx'
 ```
 1. `gakko-search`コマンドを実行すると検索できます。
-
+[!['デモ動画']('https://github.com/SuzukaHori/gakko_search/assets/129706209/00229245-90b5-4aa8-aea5-d9549c1ba310')]('https://www.youtube.com/watch?v=2j4G7obi_YY')
