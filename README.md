@@ -1,6 +1,9 @@
-# Gakko search
+# Gakkou search
 
 ターミナル上で、日本の学校を検索することができる npm です。
+
+[![Image from Gyazo](https://i.gyazo.com/5bd63ce9ae6d1677fb90d8aaee03c960.gif)](https://gyazo.com/5bd63ce9ae6d1677fb90d8aaee03c960)
+
 
 ## 準備
 
@@ -22,22 +25,17 @@ export API_TOKEN='あなたのAPIトークン'
 
 ### 2. インストール
 
-以下のコマンドで gakko-search をグローバルにインストールします。
+以下のコマンドで gakkou-search をグローバルにインストールします。
 
 ```
-npm install -g gakko-search
+npm install -g gakkou-search
 ```
 
-### 3. gakko-search コマンドを実行
+### 3. gakkou-search コマンドを実行
 
-gakko-search コマンドを実行して学校の検索を開始します。
+コマンドを実行して学校の検索を開始します。
 
 ```
-gakko-search
+gakkou-search
 ```
-
 検索条件を指定するプロンプトが表示されますので、それに従って情報を入力してください。
-
-## デモ
-
-[![デモ動画](https://i.gyazo.com/21eb8e0803c4148998b3af797285edf0.gif)](https://gyazo.com/21eb8e0803c4148998b3af797285edf0)

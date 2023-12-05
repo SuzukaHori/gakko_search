@@ -1,12 +1,12 @@
 {
-  "name": "gakko-search",
-  "version": "1.0.0",
+  "name": "gakkou-search",
+  "version": "1.0.1",
   "scripts": {
     "fix": "prettier --write . && eslint --fix .",
     "lint": "prettier --check . && eslint ."
   },
   "bin": {
-    "gakko-search": "./main.js"
+    "gakkou-search": "./main.js"
   },
   "keywords": [
     "学校",
