@@ -1,9 +1,6 @@
 import enquirer from "enquirer";
 import { typeList, prefectureList, founderList } from "./lists.js";
 
-const { prompt } = enquirer;
-const { Toggle } = enquirer;
-
 export class Question {
   static async askSearchParams() {
     const questions = [
@@ -52,7 +49,7 @@ export class Question {
         message: "キーワードがあれば入力してください。（ない場合はエンターキーで進む。）",
       },
     ];
-    return await prompt(questions);
+    return await enquirer.prompt(questions);
   }
 
   static async selectSchool(schools) {
@@ -70,11 +67,11 @@ export class Question {
         return this.focused.name;
       },
     };
-    return await prompt(question);
+    return await enquirer.prompt(question);
   }
 
   static async enterApiToken() {
-    const answer = await prompt({
+    const answer = await enquirer.prompt({
       type: "input",
       name: "token",
       message: "APIトークンが未設定です。入力してください。",
@@ -87,7 +84,7 @@ export class Question {
   }
 
   static async confirmMapDisplay() {
-    const confirm = new Toggle({
+    const confirm = new enquirer.Toggle({
       enabled: "地図を開く",
       disabled: "検索をやめる",
     });

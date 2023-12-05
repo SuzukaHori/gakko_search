@@ -2,7 +2,7 @@
 
 import { exec } from "node:child_process";
 import { Client } from "./client.js";
-import { Question } from "./questions.js";
+import { Question } from "./question.js";
 
 let token;
 if (process.env.API_TOKEN) {
