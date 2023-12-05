@@ -46,7 +46,8 @@ export class Question {
       {
         type: "input",
         name: "keyword",
-        message: "キーワードがあれば入力してください。（ない場合はエンターキーで進む。）",
+        message:
+          "キーワードがあれば入力してください。（ない場合はエンターキーで進む。）",
       },
     ];
     return await enquirer.prompt(questions);

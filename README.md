@@ -40,7 +40,7 @@ gakkou-search
 
 検索条件を指定するプロンプトが表示されますので、それに従って情報を入力してください。
 
-※検索にマッチした学校の件数が**100件を超えた場合、初めの100件のみ表示**します。
+※検索にマッチした学校の件数が**100 件を超えた場合、初めの 100 件のみ表示**します。
 
 <br>
 <br>
@@ -63,25 +63,26 @@ To use this npm, you need to register with the "学校コード検索 API". Plea
 
 The API token must be set in an environment variable. Please run the following command to set the token.
 
-````
+```
 export API_TOKEN='Your API token'
-````
+```
+
 ### 2. Installation
 
 Install gakkou-search globally with the following command.
 
-````
+```
 npm install -g gakkou-search
-````
+```
 
 ### 3. Execute gakkou-search command
 
 Run the command to start searching for schools.
 
-````
+```
 gakkou-search
-````
+```
 
 You will be prompted to specify your search criteria, so enter the information accordingly.
 
-*If the number of schools matching your search exceeds **100, only the first 100 will be displayed**.
+\*If the number of schools matching your search exceeds **100, only the first 100 will be displayed**.
