@@ -1,8 +1,18 @@
 {
+  "name": "gakko-search",
+  "version": "1.0.0",
   "scripts": {
     "fix": "prettier --write . && eslint --fix .",
     "lint": "prettier --check . && eslint ."
   },
+  "bin": {
+    "gakko-search": "./main.js"
+  },
+  "keywords": [
+    "学校",
+    "school"
+  ],
+  "license": "MIT",
   "devDependencies": {
     "eslint": "^8.43.0",
     "eslint-config-prettier": "^8.8.0",
