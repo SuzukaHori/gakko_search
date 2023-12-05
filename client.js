@@ -1,7 +1,7 @@
 import axios from "axios";
 import { School } from "./school.js";
 
-export class SchoolSearchClient {
+export class Client {
   async search(token, params) {
     const response = await this.#sendGetRequest(token, params);
     const schools = response.data.schools.data;

@@ -2,7 +2,7 @@
 
 import enquirer from "enquirer";
 import { exec } from "node:child_process";
-import { SchoolSearchClient } from "./school-search-client.js";
+import { Client } from "./client.js";
 import { School } from "./school.js";
 
 const { prompt } = enquirer;
@@ -13,7 +13,7 @@ const questionsToSearch = [
     type: "select",
     name: "school_type_code",
     message: "校種を選んでください。",
-    limit: 5,
+    limit: 8,
     choices: School.typeList.map(([code, name]) => ({
       name: name,
       value: code,
@@ -26,7 +26,7 @@ const questionsToSearch = [
     type: "autocomplete",
     name: "pref_code",
     message: "都道府県を選ぶか、漢字で入力してください。",
-    limit: 5,
+    limit: 10,
     choices: School.prefectureList.map(([code, name]) => ({
       name: code,
       message: name,
@@ -52,7 +52,7 @@ const questionsToSearch = [
     type: "input",
     name: "keyword",
     message:
-      "キーワードを入れてください。複数ある場合は半角スペースで区切ってください。",
+      "キーワードがあれば入力してください。（ない場合はエンターキーで進む。）",
   },
 ];
 const answersToSearch = await prompt(questionsToSearch);
@@ -78,7 +78,7 @@ if (process.env.API_TOKEN) {
 
 let foundSchools;
 try {
-  const client = new SchoolSearchClient();
+  const client = new Client();
   foundSchools = await client.search(token, params);
 } catch (error) {
   if (error.response && error.response.status === 401) {
@@ -97,7 +97,7 @@ if (foundSchools.length === 0) {
   process.exit();
 }
 
-const selected = await prompt({
+const selectSchool = {
   type: "autocomplete",
   limit: 10,
   name: "school",
@@ -110,7 +110,8 @@ const selected = await prompt({
   result() {
     return this.focused.name;
   },
-});
+};
+const selected = await prompt(selectSchool)
 const selectedSchool = selected.school;
 console.log(selectedSchool.info());
 
