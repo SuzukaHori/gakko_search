@@ -21,8 +21,8 @@ Object.keys(searchParams).forEach((key) => {
 
 let response;
 try {
-  const client = new Client();
-  response = await client.search(token, params);
+  const client = new Client(token, params);
+  response = await client.search();
 } catch (error) {
   if (error.response && error.response.status === 401) {
     console.error("APIトークンが不正です。設定し直してください。");

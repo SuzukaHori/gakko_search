@@ -51,10 +51,10 @@ This is npm, which allows you to search for Japanese schools on the terminal.
 
 ## Preparation
 
-To use this npm, you need to register with the "学校検索API". Please follow the steps below to register.
+To use this npm, you need to register with the "学校コード検索 API". Please follow the steps below to register.
 
-1. Access the "学校検索API" website. https://api.edu-data.jp/
-1. Complete your registration and create an account. You must review and agree to the terms of use for the "学校検索API".
+1. Access the "学校コード検索 API" website. https://api.edu-data.jp/
+1. Complete your registration and create an account. You must review and agree to the terms of use for the "学校コード検索 API".
 1. After logging in, please "Generate a token" from the "Token list" page.
 
 ## how to use
