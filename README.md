@@ -2,8 +2,7 @@
 
 ターミナル上で、日本の学校を検索することができる npm です。
 
-[![Image from Gyazo](https://i.gyazo.com/5bd63ce9ae6d1677fb90d8aaee03c960.gif)](https://gyazo.com/5bd63ce9ae6d1677fb90d8aaee03c960)
-
+[![Image from Gyazo](https://i.gyazo.com/1a9531424d3b0ec8e319edd9985895ee.gif)](https://gyazo.com/1a9531424d3b0ec8e319edd9985895ee)
 
 ## 準備
 
@@ -38,4 +37,7 @@ npm install -g gakkou-search
 ```
 gakkou-search
 ```
+
 検索条件を指定するプロンプトが表示されますので、それに従って情報を入力してください。
+
+※検索にマッチした学校の件数が**100件を超えた場合、初めの100件のみ表示**します。

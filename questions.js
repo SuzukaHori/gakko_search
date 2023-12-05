@@ -5,7 +5,7 @@ const { prompt } = enquirer;
 const { Toggle } = enquirer;
 
 export class Question {
-  static async AskSearchConditions() {
+  static async askSearchParams() {
     const questions = [
       {
         type: "select",
@@ -49,20 +49,19 @@ export class Question {
       {
         type: "input",
         name: "keyword",
-        message:
-          "キーワードがあれば入力してください。（ない場合はエンターキーで進む。）",
+        message: "キーワードがあれば入力してください。（ない場合はエンターキーで進む。）",
       },
     ];
     return await prompt(questions);
   }
 
-  static async AskSchoolToSee(foundSchools) {
+  static async selectSchool(schools) {
     const question = {
       type: "autocomplete",
       limit: 10,
       name: "school",
       message: "知りたい学校を入力するか、選択してください",
-      choices: foundSchools.map((school) => ({
+      choices: schools.map((school) => ({
         name: school,
         message: school.name,
         value: school.name,
@@ -74,16 +73,20 @@ export class Question {
     return await prompt(question);
   }
 
-  static async setToken() {
+  static async enterApiToken() {
     const answer = await prompt({
       type: "input",
       name: "token",
       message: "APIトークンが未設定です。入力してください。",
     });
-    return answer.token;
+    if (answer.token) {
+      return answer.token;
+    } else {
+      await this.enterApiToken();
+    }
   }
 
-  static async askOpenMapOrExit() {
+  static async confirmMapDisplay() {
     const confirm = new Toggle({
       enabled: "地図を開く",
       disabled: "検索をやめる",

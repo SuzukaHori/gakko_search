@@ -4,8 +4,9 @@ import { School } from "./school.js";
 export class Client {
   async search(token, params) {
     const response = await this.#sendGetRequest(token, params);
-    const schools = response.data.schools.data;
-    return schools.map(
+    const total = response.data.schools.total;
+    const schoolsData = response.data.schools.data;
+    const schools = schoolsData.map(
       (school) =>
         new School(
           school.school_name,
@@ -15,6 +16,7 @@ export class Client {
           school.school_locate_at
         )
     );
+    return { total: total, schools: schools };
   }
 
   #sendGetRequest(token, params) {
