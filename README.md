@@ -25,10 +25,13 @@ export GAKKOU_SEARCH_API_TOKEN='あなたのAPIトークン'
 ```
 
 ### 2. インストール
-npxを利用して、gakkou-searchを実行します。
+
+npx を利用して、gakkou-search を実行します。
+
 ```
 npx gakkou-search
 ```
+
 検索条件を指定するプロンプトが表示されますので、情報を入力して検索してください。
 
 ※検索にマッチした学校の件数が**100 件を超えた場合、初めの 100 件のみ表示**します。
@@ -61,9 +64,11 @@ export GAKKOU_SEARCH_API_TOKEN='Your API token'
 ### 2. Installation
 
 Execute gakkou-search using npx.
-````
+
+```
 npx gakkou-search
-````
+```
+
 You will be prompted to specify your search criteria, so enter the information accordingly.
 
 \*If the number of schools matching your search exceeds **100, only the first 100 will be displayed**.

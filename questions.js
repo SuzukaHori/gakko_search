@@ -46,7 +46,7 @@ export async function askSearchParams() {
       type: "input",
       name: "keyword",
       message:
-        "キーワードがあれば入力してください。（ない場合はエンターキーで進む。）",
+        "キーワードがあれば入力してください。\x1b[90m学校名・市区町村など（指定しない場合はエンターキーで進む。）\x1b[0m",
     },
   ];
   return await enquirer.prompt(questions);

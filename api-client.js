@@ -12,13 +12,13 @@ export class ApiClient {
     const total = response.data.schools.total;
     const schoolsData = response.data.schools.data;
     const schools = schoolsData.map(
-      (school) =>
+      (data) =>
         new School(
-          school.school_name,
-          school.school_founder,
-          school.school_type,
-          school.zip_code,
-          school.school_locate_at
+          data.school_name,
+          data.school_founder,
+          data.school_type,
+          data.zip_code,
+          data.school_locate_at
         )
     );
     return { total: total, schools: schools };
