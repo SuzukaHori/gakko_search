@@ -1,7 +1,7 @@
 import axios from "axios";
 import { School } from "./school.js";
 
-export class Client {
+export class ApiClient {
   constructor(token, params) {
     this.token = token;
     this.params = params;

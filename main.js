@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { exec } from "node:child_process";
-import { Client } from "./client.js";
+import { ApiClient } from "./api-client.js";
 import { enterApiToken, askSearchParams, selectSchool, confirmMapDisplay } from "./questions.js";
 
 let token;
@@ -21,8 +21,8 @@ Object.keys(searchParams).forEach((key) => {
 
 let response;
 try {
-  const client = new Client(token, params);
-  response = await client.search();
+  const apiClient = new ApiClient(token, params);
+  response = await apiClient.search();
 } catch (error) {
   if (error.response && error.response.status === 401) {
     console.error("APIトークンが不正です。設定し直してください。");
