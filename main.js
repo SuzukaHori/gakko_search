@@ -5,8 +5,8 @@ import { Client } from "./client.js";
 import { Question } from "./question.js";
 
 let token;
-if (process.env.API_TOKEN) {
-  token = process.env.API_TOKEN;
+if (process.env.GAKKOU_SEARCH_API_TOKEN) {
+  token = process.env.GAKKOU_SEARCH_API_TOKEN;
 } else {
   token = await Question.enterApiToken();
 }

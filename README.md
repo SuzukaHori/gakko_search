@@ -19,7 +19,7 @@
 API トークンは環境変数に設定する必要があります。以下のコマンドを実行してトークンを設定してください。
 
 ```
-export API_TOKEN='あなたのAPIトークン'
+export GAKKOU_SEARCH_API_TOKEN='あなたのAPIトークン'
 ```
 
 ### 2. インストール
@@ -64,7 +64,7 @@ To use this npm, you need to register with the "学校コード検索 API". Plea
 The API token must be set in an environment variable. Please run the following command to set the token.
 
 ```
-export API_TOKEN='Your API token'
+export GAKKOU_SEARCH_API_TOKEN='Your API token'
 ```
 
 ### 2. Installation
