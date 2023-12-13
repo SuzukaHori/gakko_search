@@ -46,7 +46,7 @@ export async function askSearchParams() {
       type: "input",
       name: "keyword",
       message:
-        "キーワードがあれば入力してください。\x1b[90m学校名・市区町村など（指定しない場合はエンターキーで進む。）\x1b[0m",
+        "キーワードがあれば入力してください。\n\x1b[90m学校名・市区町村など（指定しない場合はエンターキーで進む。）\x1b[0m",
     },
   ];
   return await enquirer.prompt(questions);
@@ -74,7 +74,7 @@ export async function enterApiToken() {
   const answer = await enquirer.prompt({
     type: "input",
     name: "token",
-    message: "APIトークンが未設定です。入力してください。",
+    message: "APIトークンが未設定です。入力してください。\n",
   });
   if (answer.token) {
     return answer.token;
