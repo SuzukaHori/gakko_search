@@ -4,7 +4,7 @@
 
 ターミナル上で、日本の学校を検索することができる npm です。
 
-[![Image from Gyazo](https://i.gyazo.com/1a9531424d3b0ec8e319edd9985895ee.gif)](https://gyazo.com/1a9531424d3b0ec8e319edd9985895ee)
+[![Image from Gyazo](https://i.gyazo.com/e5b675c80b556d9f9a3c4a288d35ad29.gif)](https://gyazo.com/e5b675c80b556d9f9a3c4a288d35ad29)
 
 ## 準備
 

@@ -1,6 +1,6 @@
 {
   "name": "gakkou-search",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "scripts": {
     "fix": "prettier --write . && eslint --fix .",
     "lint": "prettier --check . && eslint ."
@@ -22,7 +22,6 @@
   "dependencies": {
     "axios": "^1.6.2",
     "child_process": "^1.0.2",
-    "enquire": "^0.0.2",
     "enquirer": "^2.4.1",
     "url-join": "^5.0.0"
   }
