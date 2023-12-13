@@ -1,3 +1,5 @@
+[English explanation](https://www.npmjs.com/package/gakkou-search#gakkou-search-1)
+
 # Gakkou search
 
 ターミナル上で、日本の学校を検索することができる npm です。
@@ -23,22 +25,11 @@ export GAKKOU_SEARCH_API_TOKEN='あなたのAPIトークン'
 ```
 
 ### 2. インストール
-
-以下のコマンドで gakkou-search をグローバルにインストールします。
-
+npxを利用して、gakkou-searchを実行します。
 ```
-npm install -g gakkou-search
+npx gakkou-search
 ```
-
-### 3. gakkou-search コマンドを実行
-
-コマンドを実行して学校の検索を開始します。
-
-```
-gakkou-search
-```
-
-検索条件を指定するプロンプトが表示されますので、それに従って情報を入力してください。
+検索条件を指定するプロンプトが表示されますので、情報を入力して検索してください。
 
 ※検索にマッチした学校の件数が**100 件を超えた場合、初めの 100 件のみ表示**します。
 
@@ -69,20 +60,10 @@ export GAKKOU_SEARCH_API_TOKEN='Your API token'
 
 ### 2. Installation
 
-Install gakkou-search globally with the following command.
-
-```
-npm install -g gakkou-search
-```
-
-### 3. Execute gakkou-search command
-
-Run the command to start searching for schools.
-
-```
-gakkou-search
-```
-
+Execute gakkou-search using npx.
+````
+npx gakkou-search
+````
 You will be prompted to specify your search criteria, so enter the information accordingly.
 
 \*If the number of schools matching your search exceeds **100, only the first 100 will be displayed**.
